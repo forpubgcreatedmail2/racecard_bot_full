@@ -1,3 +1,1 @@
-git add runtime.txt
-git commit -m "fix: use python 3.12 to support imghdr"
-git push
+python-3.12.6
