@@ -7,6 +7,14 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from telegram import InputFile, Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
+# --- Temporary fix for Python 3.13 where imghdr is removed ---
+import sys, types
+if "imghdr" not in sys.modules:
+    imghdr_stub = types.ModuleType("imghdr")
+    imghdr_stub.what = lambda *a, **kw: None
+    sys.modules["imghdr"] = imghdr_stub
+# -------------------------------------------------------------
+
 
 # ----------------------------
 # CONFIG
@@ -215,3 +223,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
