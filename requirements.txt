@@ -1,6 +1,6 @@
 python-telegram-bot==13.15
 requests
 beautifulsoup4
-imghdr-py==0.3.0
+
 
 
